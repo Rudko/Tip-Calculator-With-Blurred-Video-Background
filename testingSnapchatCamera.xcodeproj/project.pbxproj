@@ -482,6 +482,7 @@
 				1016FF881D7E015A002A24D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1016FF891D7E015A002A24D4 /* Build configuration list for PBXNativeTarget "testingSnapchatCameraTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +491,7 @@
 				1016FF8B1D7E015A002A24D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1016FF8C1D7E015A002A24D4 /* Build configuration list for PBXNativeTarget "testingSnapchatCameraUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +500,7 @@
 				1016FF8E1D7E015A002A24D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
