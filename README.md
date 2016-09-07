@@ -13,6 +13,8 @@ Terminating app due to uncaught exception 'NSUnknownKeyException', reason: '[<te
 libc++abi.dylib: terminating with uncaught exception of type NSException
 (lldb) 
 
+Additional question. 
+I guess the Visual Effect View is not the only or most flexible way to add blur to the video preview. It only has 3 modes: Light, Extra Light and Dark which is not enough. What tool is better to use here to be able to control percentage of blur effect?
 
 
 
