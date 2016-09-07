@@ -5,7 +5,7 @@ Trying to use blurred preview from iPhone back camera as a background for an app
 As I understand Tap Gesture Recognizer (which I use in tip calculator app) can only be put in the first view. I actually need it in another view (3d one?) – the view containing calculator. Btw this view is also a part of Visual Effect View – may be I had to add calculator in a separate view and put it on a top of a previous one (Visual Effect View). 
 Anyway Tap Gesture Recognizer is not critical for me. Even when I delete it and comment out it's function – I still see only a white screen when run the app on my iPhone.
 
-The actual reason why Xcode terminates app – something wrong with totallabel. I Can't understand what. Here is what Xcode says: 
+The actual reason why Xcode terminates app – something wrong with totallabel. I can't understand what. Here is what Xcode says: 
 
 Terminating app due to uncaught exception 'NSUnknownKeyException', reason: '[<testingSnapchatCamera.ViewController 0x14fe34fb0> setValue:forUndefinedKey:]: this class is not key value coding-compliant for the key totallabel.'
 *** First throw call stack:
@@ -17,4 +17,3 @@ libc++abi.dylib: terminating with uncaught exception of type NSException
 
 
 
-it is loaded into.
