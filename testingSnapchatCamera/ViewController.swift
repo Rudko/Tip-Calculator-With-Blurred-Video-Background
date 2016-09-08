@@ -17,8 +17,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipControl: UISegmentedControl!
-    
-    
+    @IBOutlet weak var textField: UITextField!
     
     @IBAction func calculateTip(sender: AnyObject) {
 
@@ -46,14 +45,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        textField.becomeFirstResponder()
     }
 
    
-    
-   
-    
-    
-    
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
@@ -62,7 +57,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
+        UIStatusBarStyle.LightContent
+    
         captureSession = AVCaptureSession()
         captureSession?.sessionPreset = AVCaptureSessionPreset1920x1080
         
