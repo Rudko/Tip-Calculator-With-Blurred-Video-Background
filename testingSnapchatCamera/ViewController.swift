@@ -9,9 +9,10 @@
 
 import UIKit
 import AVFoundation
+//import Foundation
 
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate  {
    
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
@@ -19,19 +20,60 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var tipControl: UISegmentedControl!
     @IBOutlet weak var textField: UITextField!
     
+    
+    
+
+        
+    
+    @IBAction func onTap(sender: AnyObject) {
+        self.textField.resignFirstResponder()
+        self.tipControl.resignFirstResponder()
+    }
+
+   
+    
+    /* override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    } */
+    
+     
+    
+    
+    
+    
+        func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+            return true
+        }
+        
+        
+    
+    
+    
+    
     @IBAction func calculateTip(sender: AnyObject) {
 
-        let tipPercentages = [0.18, 0.2, 0.25]
-        
         let bill = Double(billField.text!) ?? 0
+        
+        
+        
+       /* guard tipControl.selectedSegmentIndex >= 0 else {
+        totalLabel.text = String(format: "$%.2f", bill)
+            return
+        } */
+        
+    
+        let tipPercentages = [0.18, 0.2, 0.25]
         let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
         let total = bill + tip
-        
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
+        
+        //self.view.endEditing(true)
 
-    
+        
     }
+    
+    
     
     
     
@@ -95,9 +137,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 }
 
 
-    @IBAction func onTap(sender: AnyObject) {
-view.endEditing(true)
-    }
+   
     
     
     
@@ -107,6 +147,8 @@ view.endEditing(true)
     
     
 }
+
+
 
 
 
